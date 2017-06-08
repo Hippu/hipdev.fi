@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fi">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ site.title }}</title>
+        <link rel="stylesheet" href="{{ "css/normalize.css" | relative_url }}">
+        <link rel="stylesheet" href="{{ "css/hipdev.css" | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="upper-background"></div>
+        <div class="lower-background"></div>
+        <div class="header">
+            <img src="{{ "images/hipdev_header.png" | relative_url }}">
+            <img class="ribbon" src="{{ "images/hipdev_ribbon.png" | relative_url }}">
+        </div>
+        <div class="main">
+            <div class="top-bar">
+                <h1> {{ page.title }} </h1>
+            </div>
+            <div>
+                {{ content }}
+            </div>
+        </div>
+    </body>
+</html>
