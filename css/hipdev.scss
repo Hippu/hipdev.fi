@@ -2,6 +2,7 @@
 ---
 
 $background-height: 500px;
+$background-height-small: 250px;
 $break-small: 650px;
 
 body {
@@ -23,11 +24,11 @@ a {
 .header {
     position: relative;
     margin: auto;
-    margin-top: 10%;
+    top: 90px;
     text-align: center;
     max-width: 600px;
     @media screen and (max-width: $break-small) {
-        min-height: 200px;
+        top: 0px;
     }
 }
 
@@ -44,13 +45,13 @@ a {
     z-index: 1;
     position: relative;
     max-width: 60em;
-    top: -90px;
     margin: auto;
     background: hsl(174, 30%, 80%);
     box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
     padding: 1em;
     @media screen and (max-width: $break-small) {
-        top: -60px;
+        margin-top: -15%;
+        padding-top: 3em;
     }
     
 }
@@ -65,7 +66,10 @@ a {
     background: linear-gradient(
         hsl(201, 100%, 60%) 60%,
         hsl(201, 81%, 51%)
-    )
+    );
+    @media screen and (max-width: $break-small) {
+        height: $background-height-small;
+    }
 }
 
 .lower-background {
@@ -78,5 +82,9 @@ a {
     background: linear-gradient(
         hsl(174, 90%, 60%) 30%,
         hsl(174, 67%, 54%)
-    )
+    );
+
+    @media screen and (max-width: $break-small) {
+        top: $background-height-small;
+    }
 }
